@@ -1,0 +1,151 @@
+body
+{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.header
+{
+    display: grid;
+    grid-template-columns: 0.23fr 0.61fr 0.16fr;
+    /*background: lime;*/
+    padding: 1%;
+}
+.logo
+{
+    text-align: center;
+    padding-top: 1%;
+    /*background: yellow;*/
+}
+.logo1, .logo2, .logo3
+{
+    margin-bottom: 7%;
+}
+.sitename
+{
+    text-decoration: none;
+    color: deeppink;
+    font-family: 'Modak', cursive;
+    font-size: 50px;
+}
+.sitename:hover
+{
+    color: deeppink;
+    text-decoration: none;
+}
+.pages
+{
+    /*background: purple;*/
+    padding-top: 0.5%;
+}
+.list
+{
+    /*background: springgreen;*/
+    list-style: none;
+    display: flex;
+}
+.list li
+{
+    margin-left: 2%;
+    padding-right: 5%;
+    text-align: center;
+}
+.list li a
+{
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    font-size: 42px;
+}
+.join a
+{
+    color: dodgerblue;
+}
+.join a:hover
+{
+    color: gold;
+}
+.home a, .create a, .about a
+{
+    color: gold;
+}
+.home a:hover, .create a:hover, .about a:hover
+{
+    color: dodgerblue;
+}
+.links
+{
+    text-align: center;
+    padding-top: 5%;
+    /*background: cyan;*/
+}
+.display
+{
+    text-align: center;
+    font-size: 25px;
+    color: cyan;
+    background: deeppink;
+    border-radius: 10px;
+    font-family: 'Rye', cursive;
+}
+.logout
+{
+    text-decoration: none;
+    background-color: navy;
+    color: lime;
+    border-radius: 10px;
+    font-size: 25px;
+    font-family: 'Rye', cursive;
+}
+.logout:hover
+{
+    text-decoration: none;
+    color: navy;
+    background: lime;
+}
+.display:hover
+{
+    color: deeppink;
+    background: cyan;
+}
+.content
+{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    padding-top: 7%;
+    /*background: springgreen;*/
+}
+.container
+{
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    padding-top: 3%;
+    background: red;
+    border-radius: 15px;
+}
+.note
+{
+    font-size: 40px;
+    font-weight: bold;
+}
+.code
+{
+    text-align: center;
+    border-radius: 15px;
+    font-size: 35px;
+    font-weight: bold;
+}
+.enter
+{
+    font-size: 30px;
+    color: blue;
+    background: lime;
+    border-radius: 15px;
+    font-family: 'Rye', cursive;
+}
+.enter:hover
+{
+    color: lime;
+    background: blue;
+}
