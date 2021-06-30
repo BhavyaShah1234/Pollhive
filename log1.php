@@ -17,10 +17,14 @@
     <body>
         <?php
         // ESTABLISHING CONNECTION
-        $server = "localhost";
-        $db = "dbms";
-        $un = "root";
-        $password = "";
+        // $server = "localhost";
+        // $db = "dbms";
+        // $un = "root";
+        // $password = "";
+        $server = "sql109.epizy.com";
+        $db = "epiz_28945870_dbms";
+        $un = "epiz_28945870";
+        $password = "L8CvHw8E7sckv";
         $conn = new mysqli($server, $un, $password, $db);
         if ($conn->connect_error)
         {
@@ -32,12 +36,12 @@
                 <img src="media/cross.png" class="logo1" width="40" height="40">
                 <img src="media/square.png" class="logo2" width="40" height="40">
                 <img src="media/plus.png" class="logo3" width="40" height="40">
-                <a href="home1.php" class="sitename">POLLHIVE</a>
+                <a href="index.php" class="sitename">POLLHIVE</a>
             </div>
             <div class="pages">
                 <ul class="list">
                     <li class="home">
-                        <a href="home1.php">HOME</a>
+                        <a href="index.php">HOME</a>
                     </li>
                     <li class="create">
                         <a href="signup1.php">CREATE POLL</a>
@@ -46,7 +50,7 @@
                         <a href="signup1.php">JOIN POLL</a>
                     </li>
                     <li class="about">
-                        <a href="about1.php">ABOUT</a>
+                        <a href="signup1.php">ABOUT</a>
                     </li>
                 </ul>
             </div>

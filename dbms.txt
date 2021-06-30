@@ -17,14 +17,10 @@
     <body>
         <?php
         // ESTABLISHING CONNECTION
-        // $server = "localhost";
-        // $db = "dbms";
-        // $un = "root";
-        // $password = "";
-        $server = "sql109.epizy.com";
-        $db = "epiz_28945870_dbms";
-        $un = "epiz_28945870";
-        $password = "L8CvHw8E7sckv";
+        $server = "localhost";
+        $db = "dbms";
+        $un = "root";
+        $password = "";
         $conn = new mysqli($server, $un, $password, $db);
         if ($conn->connect_error)
         {
@@ -35,115 +31,13 @@
         session_start();
         $fname = $_SESSION["fname"];
         $email = $_SESSION["email"];
-
-        // IF ANY OF THE OPTIONS FROM JOIN POLL IS CLICKED
-        if (isset($_POST["ans1"]))
-        {
-            $option = $_POST["ans1"];
-            $code = $_SESSION["code"];
-            $sql = "INSERT INTO response(email, code, opt) VALUES('$email', '$code', '$option')";
-            if ($conn->query($sql) !== TRUE)
-            {
-                echo "Error inserting values: " . $conn->error;
-            }
-        }
-        if (isset($_POST["ans2"]))
-        {
-            $option = $_POST["ans2"];
-            $code = $_SESSION["code"];
-            $sql = "INSERT INTO response(email, code, opt) VALUES('$email', '$code', '$option')";
-            if ($conn->query($sql) !== TRUE)
-            {
-                echo "Error inserting values: " . $conn->error;
-            }
-        }
-        if (isset($_POST["ans3"]))
-        {
-            $option = $_POST["ans3"];
-            $code = $_SESSION["code"];
-            $sql = "INSERT INTO response(email, code, opt) VALUES('$email', '$code', '$option')";
-            if ($conn->query($sql) !== TRUE)
-            {
-                echo "Error inserting values: " . $conn->error;
-            }
-        }
-        if (isset($_POST["ans4"]))
-        {
-            $option = $_POST["ans4"];
-            $code = $_SESSION["code"];
-            $sql = "INSERT INTO response(email, code, opt) VALUES('$email', '$code', '$option')";
-            if ($conn->query($sql) !== TRUE)
-            {
-                echo "Error inserting values: " . $conn->error;
-            }
-        }
-        if (isset($_POST["ans5"]))
-        {
-            $option = $_POST["ans5"];
-            $code = $_SESSION["code"];
-            $sql = "INSERT INTO response(email, code, opt) VALUES('$email', '$code', '$option')";
-            if ($conn->query($sql) !== TRUE)
-            {
-                echo "Error inserting values: " . $conn->error;
-            }
-        }
-        if (isset($_POST["ans6"]))
-        {
-            $option = $_POST["ans6"];
-            $code = $_SESSION["code"];
-            $sql = "INSERT INTO response(email, code, opt) VALUES('$email', '$code', '$option')";
-            if ($conn->query($sql) !== TRUE)
-            {
-                echo "Error inserting values: " . $conn->error;
-            }
-        }
-        if (isset($_POST["ans7"]))
-        {
-            $option = $_POST["ans7"];
-            $code = $_SESSION["code"];
-            $sql = "INSERT INTO response(email, code, opt) VALUES('$email', '$code', '$option')";
-            if ($conn->query($sql) !== TRUE)
-            {
-                echo "Error inserting values: " . $conn->error;
-            }
-        }
-        if (isset($_POST["ans8"]))
-        {
-            $option = $_POST["ans8"];
-            $code = $_SESSION["code"];
-            $sql = "INSERT INTO response(email, code, opt) VALUES('$email', '$code', '$option')";
-            if ($conn->query($sql) !== TRUE)
-            {
-                echo "Error inserting values: " . $conn->error;
-            }
-        }
-        if (isset($_POST["ans9"]))
-        {
-            $option = $_POST["ans9"];
-            $code = $_SESSION["code"];
-            $sql = "INSERT INTO response(email, code, opt) VALUES('$email', '$code', '$option')";
-            if ($conn->query($sql) !== TRUE)
-            {
-                echo "Error inserting values: " . $conn->error;
-            }
-        }
-        if (isset($_POST["ans10"]))
-        {
-            $option = $_POST["ans10"];
-            $code = $_SESSION["code"];
-            $sql = "INSERT INTO response(email, code, opt) VALUES('$email', '$code', '$option')";
-            if ($conn->query($sql) !== TRUE)
-            {
-                echo "Error inserting values: " . $conn->error;
-            }
-        }
         ?>
         <div class="header">
             <div class="logo">
                 <img src="media/cross.png" class="logo1" width="40" height="40">
                 <img src="media/square.png" class="logo2" width="40" height="40">
                 <img src="media/plus.png" class="logo3" width="40" height="40">
-                <a href="home2.php" class="sitename">POLLHIVE</a>
+                <a href="home1.php" class="sitename">POLLHIVE</a>
             </div>
             <div class="pages">
                 <ul class="list">
@@ -154,19 +48,17 @@
                         <a href="create.php">CREATE POLL</a>
                     </li>
                     <li class="join">
-                        <a href="code2.php">JOIN POLL</a>
+                        <a href="join.php">JOIN POLL</a>
                     </li>
                     <li class="about">
-                        <a href="about.php">ABOUT</a>
+                        <a href="about2.php">ABOUT</a>
                     </li>
                 </ul>
             </div>
             <div class="links">
-                <form method="POST" action="validation3.php">
-                    <button type="submit" name="display" class="display">
-                        <?php echo $fname;?>
-                    </button>
-                    <button type="submit" name="logout" class="logout">LOGOUT</button>
+                <form method="POST" action="home1.php">
+                    <button type="button" name="fname" class="fname"><?php echo $fname; ?></button>
+                    <button type="button" name="logout" class="logout">LOGOUT</button>
                 </form>
             </div>
         </div>
@@ -222,3 +114,177 @@
         </div>
     </body>
 </html>
+
+
+
+body
+{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.header
+{
+    display: grid;
+    grid-template-columns: 0.23fr 0.61fr 0.16fr;
+    /*background: lime;*/
+    padding: 1%;
+}
+.logo
+{
+    text-align: center;
+    padding-top: 1%;
+    /*background: yellow;*/
+}
+.logo1, .logo2, .logo3
+{
+    margin-bottom: 7%;
+}
+.sitename
+{
+    text-decoration: none;
+    color: deeppink;
+    font-family: 'Modak', cursive;
+    font-size: 50px;
+}
+.sitename:hover
+{
+    color: deeppink;
+    text-decoration: none;
+}
+.pages
+{
+    /*background: purple;*/
+    padding-top: 0.5%;
+}
+.list
+{
+    /*background: springgreen;*/
+    list-style: none;
+    display: flex;
+}
+.list li
+{
+    margin-left: 2%;
+    padding-right: 5%;
+    text-align: center;
+}
+.list li a
+{
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    font-size: 42px;
+}
+.home a
+{
+    color: dodgerblue;
+}
+.home a:hover
+{
+    color: gold;
+}
+.create a, .join a, .about a
+{
+    color: gold;
+}
+.create a:hover, .join a:hover, .about a:hover
+{
+    color: dodgerblue;
+}
+.links
+{
+    text-align: center;
+    padding-top: 5%;
+    /*background: cyan;*/
+}
+.fname, .logout
+{
+    text-decoration: none;
+    background-color: navy;
+    color: lime;
+    border-radius: 10px;
+    font-size: 25px;
+    font-family: 'Rye', cursive;
+}
+.logout:hover
+{
+    text-decoration: none;
+    color: navy;
+    background: lime;
+}
+.content
+{
+    /*background: cyan;*/
+}
+.container
+{
+    display: grid;
+    grid-template-columns: 0.39fr 0.61fr;
+    /*background: orangered;*/
+}
+.left
+{
+    padding-left: 15%;
+    padding-top: 35%;
+    padding-bottom: 45%;
+    /*background: lime;*/
+}
+.left p
+{
+    font-family: 'Frijole', cursive;
+    font-size: 50px;
+    font-weight: bold;
+}
+.make
+{
+    color: orange;
+}
+.polling
+{
+    color: orangered;
+}
+.fun
+{
+    color: red;
+}
+.right
+{
+    padding-left: 10%;
+    padding-top: 12%;
+    /*background: deeppink;*/
+}
+.right img
+{
+    position: absolute;
+    opacity: 0;
+}
+.pencil
+{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+.rocket1
+{
+    position: absolute;
+    top: 100%;
+    left: 1%;
+}
+.rocket2
+{
+    position: absolute;
+    top: 95%;
+    right: 0%;
+}
+.book
+{
+    opacity: 0;
+    position: absolute;
+    top: 20%;
+    right: 3%;
+}
+.graph
+{
+    position: absolute;
+    top: 22%;
+    left: 3%;
+}

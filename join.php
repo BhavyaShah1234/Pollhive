@@ -18,10 +18,14 @@
     <body>
         <?php
         // ESTABLISHING CONNECTION
-        $server = "localhost";
-        $db = "dbms";
-        $un = "root";
-        $password = "";
+        // $server = "localhost";
+        // $db = "dbms";
+        // $un = "root";
+        // $password = "";
+        $server = "sql109.epizy.com";
+        $db = "epiz_28945870_dbms";
+        $un = "epiz_28945870";
+        $password = "L8CvHw8E7sckv";
         $conn = new mysqli($server, $un, $password, $db);
         if ($conn->connect_error)
         {
@@ -103,14 +107,14 @@
                         <?php
                         if ($ans1 != "")
                         {
-                            echo "<button type='submit' name='ans1' class='ans'>" . $ans1 ."</button>";
+                            echo "<button type='submit' name='ans1' class='ans' value='1'>" . $ans1 ."</button>";
                         }
                         ?>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <?php
                         if ($ans2 != "")
                         {
-                            echo "<button type='submit' name='ans2' class='ans'>" . $ans2 ."</button>";
+                            echo "<button type='submit' name='ans2' class='ans' value='2'>" . $ans2 ."</button>";
                         }
                         ?>
                     </li>
@@ -118,14 +122,14 @@
                         <?php
                         if ($ans3 != "")
                         {
-                            echo "<button type='submit' name='ans3' class='ans'>" . $ans3 ."</button>";
+                            echo "<button type='submit' name='ans3' class='ans' value='3'>" . $ans3 ."</button>";
                         }
                         ?>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <?php
                         if ($ans4 != "")
                         {
-                            echo "<button type='submit' name='ans4' class='ans'>" . $ans4 ."</button>";
+                            echo "<button type='submit' name='ans4' class='ans' value='4'>" . $ans4 ."</button>";
                         }
                         ?>
                     </li>
@@ -133,14 +137,14 @@
                         <?php
                         if ($ans5 != "")
                         {
-                            echo "<button type='submit' name='ans5' class='ans'>" . $ans5 ."</button>";
+                            echo "<button type='submit' name='ans5' class='ans' value='5'>" . $ans5 ."</button>";
                         }
                         ?>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <?php
                         if ($ans6 != "")
                         {
-                            echo "<button type='submit' name='ans6' class='ans'>" . $ans6 ."</button>";
+                            echo "<button type='submit' name='ans6' class='ans' value='6'>" . $ans6 ."</button>";
                         }
                         ?>
                     </li>
@@ -148,14 +152,14 @@
                         <?php
                         if ($ans7 != "")
                         {
-                            echo "<button type='submit' name='ans7' class='ans'>" . $ans7 ."</button>";
+                            echo "<button type='submit' name='ans7' class='ans' value='7'>" . $ans7 ."</button>";
                         }
                         ?>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <?php
                         if ($ans8 != "")
                         {
-                            echo "<button type='submit' name='ans8' class='ans'>" . $ans8 ."</button>";
+                            echo "<button type='submit' name='ans8' class='ans' value='8'>" . $ans8 ."</button>";
                         }
                         ?>
                     </li>
@@ -163,14 +167,14 @@
                         <?php
                         if ($ans9 != "")
                         {
-                            echo "<button type='submit' name='ans9' class='ans'>" . $ans9 ."</button>";
+                            echo "<button type='submit' name='ans9' class='ans' value='9'>" . $ans9 ."</button>";
                         }
                         ?>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <?php
                         if ($ans10 != "")
                         {
-                            echo "<button type='submit' name='ans10' class='ans'>" . $ans10 ."</button>";
+                            echo "<button type='submit' name='ans10' class='ans' value='10'>" . $ans10 ."</button>";
                         }
                         ?>
                     </li>

@@ -17,10 +17,14 @@
     <body>
         <?php
         // ESTABLISHING CONNECTION
-        $server = "localhost";
-        $db = "dbms";
-        $un = "root";
-        $password = "";
+        // $server = "localhost";
+        // $db = "dbms";
+        // $un = "root";
+        // $password = "";
+        $server = "sql109.epizy.com";
+        $db = "epiz_28945870_dbms";
+        $un = "epiz_28945870";
+        $password = "L8CvHw8E7sckv";
         $conn = new mysqli($server, $un, $password, $db);
         if ($conn->connect_error)
         {
